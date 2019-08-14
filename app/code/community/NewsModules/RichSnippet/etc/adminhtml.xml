@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<menu>
+		<newsmodulestab module="richsnippet" translate="title">
+			<title>Ne.W.S. Modules</title>
+			<sort_order>100</sort_order>
+			<children>
+				<richsnippet_uninstall module="richsnippet" translate="title">
+					<title>Uninstall Rich Snippet</title>
+					<sort_order>1</sort_order>
+					<action>richsnippet/uninstall/index</action>
+				</richsnippet_uninstall>
+			</children>
+		</newsmodulestab>
+	</menu>
+</config>

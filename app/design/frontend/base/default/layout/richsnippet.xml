@@ -1,5 +1,16 @@
 <?xml version="1.0"?>
 <layout version="0.1.0">
+	<richsnippet_uninstall_index>
+		<reference name="root">
+            <action method="setTemplate"><template>page/empty.phtml</template></action>
+            <!-- Mark root page block that template is applied -->
+            <action method="setIsHandle"><applied>1</applied></action>
+        </reference>
+		<reference name="content">
+			<block type="core/template" name="form" template="richsnippet/uninstall/index.phtml" />
+		</reference>
+	</richsnippet_uninstall_index>
+
 	<default>
 		<reference name="breadcrumbs">
 			<action method="setTemplate">

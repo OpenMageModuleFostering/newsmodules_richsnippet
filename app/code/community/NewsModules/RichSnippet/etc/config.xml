@@ -2,7 +2,7 @@
 <config>
 	<modules>
 		<NewsModules_RichSnippet>
-			<version>0.1.0</version>
+			<version>0.1.2</version>
 		</NewsModules_RichSnippet>
 	</modules>
 	<global>
@@ -33,6 +33,15 @@
 				</richsnippet>
 			</updates>
 		</layout>
+		<routers>
+			<richsnippet>
+				<use>standard</use>
+				<args>
+					<module>NewsModules_RichSnippet</module>
+					<frontName>richsnippet</frontName>
+				</args>
+			</richsnippet>
+		</routers>
 	</frontend>
 	<adminhtml>
 		<layout>
@@ -43,4 +52,11 @@
 			</updates>
 		</layout>
 	</adminhtml>
+	<default>
+		<catalog>
+			<newsmodules_richsnippet>
+				<enable_uninstall>0</enable_uninstall>
+			</newsmodules_richsnippet>
+		</catalog>
+	</default>
 </config>

@@ -1,0 +1,8 @@
+<?php if ($display_form) { ?>
+<div style="text-align: center; margin-top: 50px;">
+	<form action="<?php echo Mage::getUrl('*/*/execute') ?>" method="post">
+		<?php echo $this->__('Do you want remove Rich Snippet Module database changes?'); ?>
+		<input type="submit" name="submit" id="submit" value="<?php echo $this->__('Execute'); ?>" />
+	</form>
+</div>
+<?php } ?>
