@@ -1,0 +1,10 @@
+<?php
+	$_product = $this->getProduct();
+	$_associatedProducts = $this->getAssociatedProducts();
+	$_hasAssociatedProducts = count($_associatedProducts) > 0;
+?>
+<?php if ($_product->isAvailable() && $_hasAssociatedProducts): ?>
+	<span itemprop="availability" content="in_stock"></span>
+<?php else: ?>
+	<span itemprop="availability" content="out_of_stock"></span>
+<?php endif; ?>

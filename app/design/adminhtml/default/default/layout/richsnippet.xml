@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <adminhtml_catalog_category_edit>
+        <reference name="head">
+			<action method="addJs"><script>newsmodules/richsnippet/jquery-1.11.1.min.js</script></action>
+			<action method="addJs"><script>newsmodules/richsnippet/jquery-noconflict.js</script></action>
+			<action method="addJs"><script>newsmodules/richsnippet/adminhtml/catalog/category.js</script></action>
+        </reference>
+    </adminhtml_catalog_category_edit>
+</layout>

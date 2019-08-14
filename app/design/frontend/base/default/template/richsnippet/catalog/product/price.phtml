@@ -1,0 +1,15 @@
+<?php
+$_taxHelper = $this->helper('tax');
+/* @var $_taxHelper Mage_Tax_Helper_Data */
+
+$_product = $this->getProduct();
+$_store = $_product->getStore();
+$_convertedFinalPrice = $_store->roundPrice($_store->convertPrice($_product->getFinalPrice()));
+$_finalPrice = $_taxHelper->getPrice($_product, $_convertedFinalPrice);
+?>
+
+<span itemprop="price" style="display: none;"><?php echo $_finalPrice ?></span>
+<?php $specialToDate = substr($_product->getSpecialToDate(), 0, 10); ?>
+<?php if ($specialToDate >= date('Y-m-d')) { ?>
+<time itemprop="priceValidUntil" datetime="<?php echo $specialToDate ?>"></time>
+<?php } ?>

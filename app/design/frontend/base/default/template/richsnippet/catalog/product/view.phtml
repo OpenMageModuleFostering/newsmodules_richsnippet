@@ -1,0 +1,13 @@
+<?php $_helper = $this->helper('catalog/output'); ?>
+<?php $_product = $this->getProduct(); ?>
+<span itemprop="name" style="display: none;"><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></span>
+<span itemprop="identifier" content="sku:<?php echo $_product->getSku() ?>"></span>
+<?php if ($brand = Mage::helper('richsnippet')->getBrand()) { ?>
+<span itemprop="brand" style="display: none;"><?php echo $brand ?></span>
+<?php } ?>
+<?php if ($category = Mage::helper('richsnippet')->getCategory()) { ?>
+<span itemprop="category" content="<?php echo $category ?>"></span>
+<?php } ?>
+<?php if ($_product->getShortDescription()):?>
+	<div itemprop="description" style="display: none;"><?php echo $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description') ?></div>
+<?php endif;?>

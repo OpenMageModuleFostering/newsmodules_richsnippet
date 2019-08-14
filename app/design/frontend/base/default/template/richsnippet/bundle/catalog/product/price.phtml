@@ -1,0 +1,19 @@
+<?php
+/**
+ * @var $this Mage_Bundle_Block_Catalog_Product_Price
+ */
+/**
+ * @var $_taxHelper Mage_Tax_Helper_Data
+ */
+$_taxHelper  = $this->helper('tax');
+
+/**
+ * @var $_product Mage_Catalog_Model_Product
+ * @var $_priceModel Mage_Bundle_Model_Product_Price
+ */
+$_product     = $this->getProduct();
+$_priceModel  = $_product->getPriceModel();
+
+list($_minimalPriceTax, $_maximalPriceTax) = $_priceModel->getTotalPrices($_product, null, null, false);
+?>
+<span itemprop="price" style="display: none;"><?php echo $_minimalPriceTax ?></span>
