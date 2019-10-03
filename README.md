@@ -1,3 +1,5 @@
+
+
 ## Original Package Description
 
 Adds metadata to the products and breadcrumbs to improve indexing on search engines.
